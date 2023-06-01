@@ -15,6 +15,10 @@ def add_event():
     event_number_of_guests=request.form["number_of_guests"]
     event_room_location=request.form["room_location"]
     event_description=request.form["description"]
-    event = Event(event_date, event_name, event_number_of_guests, event_room_location, event_description)
+    event_passed = False
+    event = Event(event_date, event_name, event_number_of_guests, event_room_location, event_description, event_passed)
     add_new_event(event)
-    return render_template("index.html", events = events)
+    names = []
+    for item in events:
+        names.append(item.name_of_event)
+    return render_template("index.html", events = events, names = names)

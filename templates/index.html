@@ -17,5 +17,11 @@
 <h1> Events</h1>
     {% for event in events%}
         <h2>{{event.date}} : {{event.name_of_event}} : {{event.number_of_guests}} : {{event.room_location}} : {{event.description}}</h2>
+        {%if event.passed%}
+            <span>&#9745;</span>
+        {%endif%}
+        {%if names.count(event.name_of_event) >= 2%}
+        <h2> RECURRING!!!!!!</h2>
+        {%endif%}
     {% endfor %}
     {% endblock%}
