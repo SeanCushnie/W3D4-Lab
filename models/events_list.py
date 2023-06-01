@@ -6,3 +6,6 @@ event1 = Event(datetime.datetime(2020, 1, 1), "Beyonce", 1000, "Ovo Hydro", "Con
 event2 = Event(datetime.datetime(2021,1,1), "Nickelback", 5, "Ovo Hydro", "Bad Concert")
 
 events = [event1, event2]
+
+def add_new_event(event):
+    events.append(event)

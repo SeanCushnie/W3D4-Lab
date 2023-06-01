@@ -16,6 +16,6 @@
 </form>
 <h1> Events</h1>
     {% for event in events%}
-        <h2>{{event.date.strftime("%b %d %Y")}} : {{event.name_of_event}} : {{event.number_of_guests}} : {{event.room_location}} : {{event.description}}</h2>
+        <h2>{{event.date}} : {{event.name_of_event}} : {{event.number_of_guests}} : {{event.room_location}} : {{event.description}}</h2>
     {% endfor %}
     {% endblock%}
